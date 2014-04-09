@@ -176,7 +176,6 @@ function ajouterNewBug(){
     $obj = $_POST['objet'];
     $lib = $_POST['libelle'];
     $apps = $_POST['apps'];
-    $image = $_FILES['image'];
 
     //echo var_dump($apps);
 
@@ -191,13 +190,20 @@ function ajouterNewBug(){
     $bug->setStatus("OPEN");
     $bug->setDatelimite(null);
 
-    if($_FILES['image']['error'] == 0){
-        $image = uploadImage();
+    if(isset($_FILES['image']) && !empty($_FILES['image'])){
+        if($_FILES['image']['error'] == 0){
+            $image = uploadImage();
+
+        }else{
+            $image = null;
+        }
 
     }else{
         $image = null;
     }
+
     $bug->setScreen($image);
+
 
     foreach ($apps as $productId) {
         $product = $entityManager->find("Product", $productId);
