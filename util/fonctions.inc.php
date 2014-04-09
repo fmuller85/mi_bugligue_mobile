@@ -1,6 +1,5 @@
 ﻿<?php
 /**
- * KEVIN PUISSANT
  * teste si une chaîne a un format de code postal
  *
  * Teste le nombre de caractères de la chaîne et le type entier (composé de chiffres)
