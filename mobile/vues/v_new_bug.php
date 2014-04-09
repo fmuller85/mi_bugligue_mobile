@@ -1,4 +1,4 @@
-
+<a data-mini="true" data-inline="true" data-role="button" data-transition="slide" href="index.php?uc=dash" data-theme="c"><span class="ui-btn-inner"><span class="ui-btn-text">Dashboard Club</span></span></a>
 <form name="new_bug" method="POST" action="index.php?uc=dash&action=nouveau">
     <fieldset>
     <legend>Signalement d'un nouveau bug</legend>

@@ -6,7 +6,7 @@
     </div>
     <div data-role="content">
         <h4>Bienvenue sur votre console de gestion</h4>
-        <a data-mini="true" data-inline="true" data-role="button" data-transition="slide" href="index.php?uc=dash&action=nouveau" data-theme="c"><span class="ui-btn-inner"><span class="ui-btn-text">slide</span></span></a>
+        <a data-mini="true" data-inline="true" data-role="button" data-transition="slide" href="index.php?uc=dash&action=nouveau" data-theme="c"><span class="ui-btn-inner"><span class="ui-btn-text">Nouveau bug</span></span></a>
 
         <div data-role="collapsible-set" data-theme="b" data-content-theme="a">
             <div id="liste_tickets">
