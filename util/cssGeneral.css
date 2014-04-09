@@ -1,0 +1,199 @@
+html {
+font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+}
+
+fieldset {
+ 		display:block;
+ 		width:50%;
+		border: 1px dotted #353535;
+		padding:2px;
+ 		overflow:hidden;                   
+}
+
+label {
+	background:transparent none;
+	display: block;
+	width: 20%;
+	float: left;
+	padding-right: 1%;
+	text-align: left;
+}
+
+input {
+	margin-left: 1%;
+	width: 30%;
+	border: #CCC 1px solid;
+}
+
+input:hover, #ent input:focus {
+	border: #999 1px solid;
+	background-color: #DDEEFF;
+}
+
+input[type="submit"]
+{
+	border: #DDEEFF 1px solid;
+	width: 30%;
+}
+.erreur{ 
+   background-color:rgb(237,210,229);
+   color:rgb(203,28,128);
+   font-size:1.1em;
+   width:95%;
+}
+.message{ 
+   background-color:rgb(99, 184, 255);
+   color:rgb(0,0,205);
+   font-size:1.1em;
+   width:95%;
+}
+
+#bandeau {
+
+}
+
+#menu{
+display: inline-block;
+margin: 14px 0px;
+}
+
+
+#contenu{
+
+}
+
+#menu li {
+		list-style-type: none;
+		list-style-image:none;
+		float: left ; 
+		text-align: center;
+    width: 200px ; 
+    border: 1px solid #600 ; 
+    margin-right: 1px ; 
+    color: #fff ; 
+    background: #ccff11 ;
+    padding: 5px;
+}
+
+#menu li a , #categories li a {
+		text-decoration:none;
+}
+
+.button{
+    background-color: #DDEEFF;
+    display: inline-block;
+    width: 160px;
+}
+
+.button a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+}
+
+#liste_tickets li, #liste_tickets li a {
+    color: black;
+    list-style-type: none;
+	list-style-image:none;
+	display:inline;
+    width:175px;
+    text-align:center;
+    height:205px;
+    vertical-align:middle;
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
+}
+
+#liste_tickets ul{
+    border-top: 2px solid lightgrey;
+}
+
+#liste_tickets table{
+    margin: 0 auto;
+}
+
+.unticket{
+    margin: 0 auto;
+    width: 800px;
+    text-align: left;
+}
+
+.unticket li{
+    padding: 0px;
+}
+
+.unticket li img{
+    padding-left: 4px;
+    padding-top: 4px;
+}
+
+#liste_tickets{
+    margin: 0 auto;
+}
+
+#liste_tickets tr td{
+     text-align: center;
+ }
+
+#liste_tickets tr th:first-of-type{
+    min-width: 50px;
+}
+
+#liste_tickets .col-date{
+    min-width: 140px;
+}
+
+#liste_tickets .col-produit{
+    min-width: 120px;
+}
+
+#liste_tickets .col-description{
+    min-width: 120px;
+}
+
+#liste_tickets .col-rapport{
+    min-width: 230px;
+}
+
+.form-connexion{
+    max-width: 235px;
+}
+
+.form-connexion ul li{
+    padding: 7px;
+}
+
+.form-connexion ul li label{
+    width: 100px;
+}
+
+.form-connexion ul li input{
+    width: 100px;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+legend{
+    text-align: center;
+}
+
+.bt-voir-description{
+    cursor: pointer;
+}
+
+.bt-cacher-description{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.description{
+    color: white;
+    background-color: lightgrey;
+}
+
+
