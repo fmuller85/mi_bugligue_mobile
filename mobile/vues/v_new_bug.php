@@ -12,7 +12,7 @@
     </p>
     <p>
         <label for="apps">Application(s) concernées : </label>
-        <select multiple id="apps" name="apps[]">
+        <select data-native-menu="false" multiple id="apps" name="apps[]">
             <?php
             foreach($the_products as $p){
                 echo '<option value="'.$p->getId().'">'.$p->getName().'</option>';
@@ -22,7 +22,12 @@
     </p>
     <p>
         <input type="submit" value="Valider" name="valider">
-        <input type="reset" value="Annuler" name="annuler">
+        <input type="reset" id='bt-annuler' value="Annuler" name="annuler">
     </p>
     </fieldset>
 </form>
+<script>
+    $('#bt-annuler').click(function(){
+        window.location="index.php?uc=dash";
+    });
+</script>
