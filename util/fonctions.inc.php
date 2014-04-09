@@ -65,7 +65,7 @@ function seDeconnecter(){
  *
  */
 function authentifierUser($l,$m){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
 
     $dql = "SELECT u FROM User u WHERE u.login = '$l' AND u.mdp = '$m'";
 
@@ -87,7 +87,7 @@ function authentifierUser($l,$m){
 }
 
 function getAllBugs(){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $bugRepository = $entityManager->getRepository('Bug');
     $bugs = $bugRepository->findAll();
     $tab1 = array();
@@ -104,7 +104,7 @@ function getAllBugs(){
 }
 
 function getAssignedBugByUser($id){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $users = $entityManager->find('User', $id);
     $bugs = $users->getAssignedBugs();
     $tab1 = array();
@@ -122,7 +122,7 @@ function getAssignedBugByUser($id){
 
 
 function getAllTech(){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
 
     $dql = "SELECT u FROM User u WHERE u.fonction = 'Technicien' OR u.fonction = 'Responsable'";
 
@@ -133,27 +133,27 @@ function getAllTech(){
 }
 
 function getAllProducts(){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $productRepository = $entityManager->getRepository('Product');
     $products = $productRepository->findAll();
     return $products;
 }
 
 function getProductsById($id){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $product = $entityManager->find("Product", $id);
     return $product;
 }
 
 function getBugById($id){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $product = $entityManager->find("Bug", $id);
     return $product;
 }
 
 
 function getBugsOpenByUser($id){
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
     $users = $entityManager->find('User', $id);
     $bugs = $users->getReportedBugs();
     $tab1 = array();
@@ -179,7 +179,7 @@ function ajouterNewBug(){
 
     //echo var_dump($apps);
 
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
 
     $reporter = $entityManager->find("User", $_SESSION['login']['id']);
     //$engineer = new User();
@@ -215,7 +215,7 @@ function ajouterNewBug(){
 function ajouterRapport($idbug){
     $resume = $_POST['rapport'];
 
-    require $_SERVER['DOCUMENT_ROOT']."mi_bugligue_mobile/bootstrap.php";
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
 
     $bug = $entityManager->find("Bug", $idbug);
 
