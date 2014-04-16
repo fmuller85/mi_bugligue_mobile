@@ -41,7 +41,14 @@ switch($action){
     }*/
 
     case 'modifierbug':{
-        var_dump($_POST);
+        if(isset($_POST['valider'])){
+            $datelimite = $_POST['datelimite'];
+            $technicien = $_POST['technicien'];
+            $idBug = $_POST['idbug'];
+
+
+
+        }
         $idBug = $_POST['idbug'];
         $the_bug = getBugById($idBug);
         $liste_techniciens = getAllTech();
@@ -53,6 +60,10 @@ switch($action){
         }*/
         include("vues/v_modifierbug.php");
         break;
+    }
+
+    case 'validationFormulaire':{
+
     }
 }
 

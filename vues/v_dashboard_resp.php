@@ -11,7 +11,7 @@
             $engineer = "<select id='".$bug->getId()."' class='select-tech' name='technicien'>";
             Foreach($liste_techniciens as $technicien){
 
-                 $engineer .= "<option value='".$technicien->getId()."'>".$technicien->getName()." (".getNbBugByTech($technicien->getId()).")"."</option>";
+                 $engineer .= "<option value='".$technicien->getId()."'>".$technicien->getName()."</option>";
             }
             $engineer .= "</select>";
 
