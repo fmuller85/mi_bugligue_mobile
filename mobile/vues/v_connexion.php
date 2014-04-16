@@ -16,11 +16,11 @@
                 <label for="mdp">Mot de passe</label>
                 <input id="mdp" type="password" name="mdp" size="30" maxlength="45" placeholder="Mot de passe">
             </div>
-            <input type="submit" value="Valider" name="valider">
-            <input type="reset" value="Annuler" name="annuler">
+            <input type="submit" value="Valider" data-theme="b" name="valider">
+            <input type="reset" value="Annuler" data-theme="b" name="annuler">
         </form>
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" data-theme="b">
         <h4>Pied de page</h4>
     </div>
 </div>

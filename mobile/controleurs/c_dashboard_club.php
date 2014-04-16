@@ -29,6 +29,19 @@ switch($action){
         include("vues/v_new_bug.php");
         break;
     }
+
+    case 'detailbug':{
+        $idBug = $_POST['idbug'];
+        $the_bug = getBugById($idBug);
+        /*if(isset($_POST['valider'])){
+            if(isset($_POST['rapport'])){
+                $message = ajouterRapport($idBug);
+                include("vues/v_message.php");
+            }
+        }*/
+        include("vues/v_detailbug.php");
+        break;
+    }
 }
 
 

@@ -258,4 +258,16 @@ function uploadImage(){
         if ($resultat) return $nom;
     }
 }
+
+function getNbBugByTech($idTech){
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
+
+    $dql = "Call get_nbbug_tech(".$idTech.");";
+
+    $query = $entityManager->createQuery($dql);
+    $nbbug = $query->getResult();
+
+    return $nbbug;
+}
+
 ?>

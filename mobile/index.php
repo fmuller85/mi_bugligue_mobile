@@ -55,6 +55,12 @@ switch($uc)
         break;
         break;
     }
+
+    case 'deconnexion' :
+    {
+        seDeconnecter();
+        header("Location: ./");
+    }
 }
 //include("./vues/v_erreurs.php");
 //include("./vues/v_footer.php") ;

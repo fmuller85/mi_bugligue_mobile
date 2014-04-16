@@ -11,7 +11,7 @@
             $engineer = "<select id='".$bug->getId()."' class='select-tech' name='technicien'>";
             Foreach($liste_techniciens as $technicien){
 
-                 $engineer .= "<option value='".$technicien->getId()."'>".$technicien->getName()."</option>";
+                 $engineer .= "<option value='".$technicien->getId()."'>".$technicien->getName()." (".getNbBugByTech($technicien->getId()).")"."</option>";
             }
             $engineer .= "</select>";
 
@@ -122,7 +122,7 @@
 
             $.ajax({
                 type:"POST",
-                url:"/ppe5/PPE5_MI/util/traitements_JSON.php",
+                url:"/mi_bugligue_mobile/util/traitements_JSON.php",
                 dataType:"json",
                 data:"action=affecter_technicien&tech_id="+idTech+"&bug_id="+idbug,
                 success: function(data){
@@ -139,7 +139,7 @@
 
             $.ajax({
                 type:"POST",
-                url:"/ppe5/PPE5_MI/util/traitements_JSON.php",
+                url:"/mi_bugligue_mobile/util/traitements_JSON.php",
                 dataType:"json",
                 data:"action=liste_technicien",
                 success: function(data){
@@ -189,7 +189,7 @@
 
                 $.ajax({
                     type:"POST",
-                    url:"/ppe5/PPE5_MI/util/traitements_JSON.php",
+                    url:"/mi_bugligue_mobile/util/traitements_JSON.php",
                     data:"action=set_date_limite&bug_id="+idbug+"&date_limite="+date,
                     success: function(data){
                         window.location='index.php?uc=dash';
@@ -225,7 +225,7 @@
 
                     $.ajax({
                         type:"POST",
-                        url:"/ppe5/PPE5_MI/util/traitements_JSON.php",
+                        url:"/mi_bugligue_mobile/util/traitements_JSON.php",
                         data:"action=set_date_limite&bug_id="+idbug+"&date_limite="+date,
                         success: function(data){
                             window.location='index.php?uc=dash';
