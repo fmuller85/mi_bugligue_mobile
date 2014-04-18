@@ -41,29 +41,47 @@ switch($action){
     }*/
 
     case 'modifierbug':{
-        if(isset($_POST['valider'])){
-            $datelimite = $_POST['datelimite'];
-            $technicien = $_POST['technicien'];
-            $idBug = $_POST['idbug'];
+        if(isset($_POST['idbug'])){
+            if(isset($_POST['valider'])){
+                $datelimite = $_POST['datelimite'];
+                $technicien = $_POST['technicien'];
+                $idBug = $_POST['idbug'];
 
-
-
-        }
-        $idBug = $_POST['idbug'];
-        $the_bug = getBugById($idBug);
-        $liste_techniciens = getAllTech();
-        /*if(isset($_POST['valider'])){
-            if(isset($_POST['rapport'])){
-                $message = ajouterRapport($idBug);
+                $message = updatebug($idBug, $technicien, $datelimite);
                 include("vues/v_message.php");
+            }else{
+                $idBug = $_POST['idbug'];
+                $the_bug = getBugById($idBug);
+                $liste_techniciens = getAllTech();
+                /*if(isset($_POST['valider'])){
+                    if(isset($_POST['rapport'])){
+                        $message = ajouterRapport($idBug);
+                        include("vues/v_message.php");
+                    }
+                }*/
+                include("vues/v_modifierbug.php");
             }
-        }*/
-        include("vues/v_modifierbug.php");
+        }else{
+            $message = "Bug non trouvé";
+            include("vues/v_message.php");
+        }
         break;
     }
 
-    case 'validationFormulaire':{
-
+    case 'rapport':{
+        if(isset($_POST['valider'])){
+            if(isset($_POST['rapport'])){
+                $idBug = $_POST['idbug'];
+                $message = ajouterRapport($idBug);
+                include("vues/v_message.php");
+                echo "<script> window.location='index.php?uc=dash';</script>";
+            }
+        }else{
+            $idBug = $_GET['idbug'];
+            $the_bug = getBugById($idBug);
+            include("vues/v_rapport.php");
+        }
+        break;
     }
 }
 

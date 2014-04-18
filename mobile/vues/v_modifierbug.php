@@ -6,6 +6,8 @@
         </div>
     </div>
     <div data-role="content">
+        <a id="<?php echo $the_bug->getId(); ?>" class="bt-rapport" data-icon="edit" data-role="button" data-transition="slide" href="index.php?uc=dash&action=rapport&idbug=<?php echo $idBug; ?>" data-theme="b">Créer un rapport</a>
+
         <h4>Bienvenue sur votre console de gestion</h4>
 
         <div>
@@ -70,6 +72,16 @@
 </div>
 <script>
     jQuery(function($){
+        alert('coucou !!');
+        $(".bt-rapport").click(function(){
+            alert('coucou');
+            /*var idbug = $(this).attr('id');
+
+            $.mobile.changePage('index.php?uc=dash&action=rapport', {
+                type : 'POST',
+                data : 'idbug='+idbug
+            });*/
+        });
     })
 </script>
 

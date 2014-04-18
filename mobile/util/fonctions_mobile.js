@@ -1,6 +1,6 @@
 /**
  * Created with JetBrains PhpStorm.
- * User: Eric
+ * User: Eric le violoneux
  * Date: 21/02/14
  * Time: 18:08
  * To change this template use File | Settings | File Templates.

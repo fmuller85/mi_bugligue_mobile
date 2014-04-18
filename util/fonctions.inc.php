@@ -239,6 +239,19 @@ function ajouterRapport($idbug){
     return "Le rapport a été crée.";
 }
 
+function updatebug($idbug, $idtechnicien, $datelimite){
+    require $_SERVER['DOCUMENT_ROOT']."/mi_bugligue_mobile/bootstrap.php";
+    $bug = $entityManager->find("Bug", $idbug);
+    $technicien = $entityManager->find("User", $idtechnicien);
+    $bug->setDatelimite(new DateTime($datelimite));
+    $bug->setEngineer($technicien);
+
+    $entityManager->persist($bug);
+    $entityManager->flush();
+
+    return "Le bug a été modifié.";
+}
+
 function uploadImage(){
     $maxsize = 1048576;
 

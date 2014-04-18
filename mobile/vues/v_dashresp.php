@@ -29,7 +29,7 @@
                             /*foreach ($bug->getProducts() as $product) {
                                 echo "- ".$product->getName()." ";
                             }*/
-                            echo '<a value="'.$bug->getId().'" class="detail" data-rel="dialog" data-icon="plus" data-inline="false" data-role="button" data-transition="slide" href="" data-theme="b">Traiter</a>';
+                            echo '<a value="'.$bug->getId().'" class="detail" data-rel="dialog" data-icon="edit" data-inline="false" data-role="button" data-transition="slide" href="" data-theme="b">Traiter</a>';
                             echo "</td>";
                             echo "</tr>";
                         }
